@@ -5,6 +5,82 @@
     <title>Page Title</title>
   </head>
   <body>
+    <div class="game-container">
+        <div class="UIstartOfGame">
+            <h1>RockPaperScissors</h1>
+            <div class="playControls">
+                <button class="playButton firstPlayButton">Play Game</button>
+                <!-- Need a class for when it is a play again-->
+                <div class = "chooseRoundCount">
+                    <p>Rounds</p>
+                    <input type="number" class="round-count-input" min="0" max="5">
+                </div>
+                
+            </div>
+        </div>
+        <div class="UImainGame">
+            <div class="UIscore">
+                <h3>Game Score</h3>
+                <div class="score">
+                    <div class="personScore">
+                        <h4>Person</h4>
+                        <p class="personScoreCount">0</p>
+                    </div>
+                    <div class="computerScore">
+                        <h4>Computer</h4>
+                        <p class="computerScoreCount">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="UImainControls">
+                <h3>Choose Your Hand</h3>
+                <div class="handControls">
+                    <button class="handButton rockButton">Rock</button>
+                    <button class="handButton paperButton">Paper</button>
+                    <button class="handButton scissorsButton">Scissors</button>
+                </div>
+                <div class="UIresult">
+                    <p class="resultLabel">Who is Gonna Win?</p>
+                </div>
+            </div>
+        </div>
+        <div class="UIendOfGame">
+            <div class="UIfinalResult">
+                 <h3>Winner</h3>
+                 <div class="UIscore">
+                    <h3>Game Score</h3>
+                    <div class="score">
+                        <div class="personScore">
+                            <h4>Person</h4>
+                            <p class="personScoreCount">0</p>
+                        </div>
+                        <div class="computerScore">
+                            <h4>Computer</h4>
+                            <p class="computerScoreCount">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="UIplayAgain">
+                <button class="playButton playAgainButton">Play Again</button>
+                <div class = "chooseRoundCount">
+                    <p>Rounds</p>
+                    <input type="number" class="round-count-input" min="0" max="5">
+                </div>
+           
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
     <script>
      
      
@@ -20,7 +96,7 @@
         // Ask if he wants to play again, if yes, start the game again, if no, stop the game
 
         
-
+        /*
         // Main Body
         alert("Welcome to Rock, Paper, Scissors"); 
         let PersonWantsToPlay = true;
@@ -159,6 +235,7 @@
                 return false;
             }
         }
+        */
     </script>
   </body>
 </html>
