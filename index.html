@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+  </head>
+  <body>
+    <script>
+     
+     
+
+        // Get the person to start a game by selecting how many round he wants to play
+        // Function which starts the game
+            // Get the user choice
+            // Get the computer choice
+            // Play a round
+            // Display the result
+            // Display the score
+        // When the rounds expire, display the winner
+        // Ask if he wants to play again, if yes, start the game again, if no, stop the game
+
+        
+
+        // Main Body
+        alert("Welcome to Rock, Paper, Scissors"); 
+        let PersonWantsToPlay = true;
+        while(PersonWantsToPlay === true)
+        {
+            // Get the person to start a game by selecting how many round he wants to play
+            playGame(getRounds());
+            // Ask if he wants to play again, if yes, start the game again, if no, stop the game
+            PersonWantsToPlay = playAgain();
+        }
+        // Functions
+        function getRounds()
+        {
+            let rounds = parseInt(prompt("How many rounds do you want to play?"));
+            while(rounds < 1 || rounds > 5 || isNaN(rounds))
+            {
+                rounds = parseInt(prompt("How many rounds do you want to play?"));
+            }
+            return rounds;
+        }
+        function getUserChoice()
+        {
+            let userChoice = prompt("Rock, Paper, or Scissors?").toLowerCase();
+            while(userChoice !== "rock" && userChoice !== "paper" && userChoice !== "scissors")
+            {
+                userChoice = prompt("Rock, Paper, or Scissors?").toLowerCase();
+            }
+            return userChoice;
+        }
+        function getComputerChoice()
+        {
+            let computerChoice = Math.floor(Math.random() * 3);
+            if(computerChoice === 0)
+            {
+                computerChoice = "rock";
+            }
+            else if(computerChoice === 1)
+            {
+                computerChoice = "paper";
+            }
+            else
+            {
+                computerChoice = "scissors";
+            }
+            return computerChoice;
+        }
+        function playRound()
+        {
+            let userChoice = getUserChoice();
+            let computerChoice = getComputerChoice();
+            alert("User Choice: " + (userChoice.charAt(0).toUpperCase() + userChoice.slice(1).toLowerCase()) + "\nComputer Choice: " + (computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1).toLowerCase()));
+            if(userChoice === computerChoice)
+            {   
+                
+                return "Tie";
+            }
+            else if(userChoice === "rock")
+            {
+                if(computerChoice === "paper")
+                {
+                    return "Computer";
+                }
+                else
+                {
+                    return "Person";
+                }
+            }
+            else if(userChoice === "paper")
+            {
+                if(computerChoice === "scissors")
+                {
+                    return "Computer";
+                }
+                else
+                {
+                    return "Person";
+                }
+            }
+            else if(userChoice === "scissors")
+            {
+                if(computerChoice === "rock")
+                {
+                    return "Computer";
+                }
+                else
+                {
+                    return "Person";
+                }
+            }
+        }
+        function playGame(rounds)
+        {
+            let personScore = 0;
+            let computerScore = 0;
+            for(let i = 0; i < rounds; i++)
+            {
+                let result = playRound();
+                if(result === "Person")
+                {
+                    personScore++;
+                }
+                else if(result === "Computer")
+                {
+                    computerScore++;
+                }
+                alert("Person Score: " + personScore + "\nComputer Score: " + computerScore);
+            }
+            if(personScore > computerScore)
+            {
+                alert("Person wins!");
+            }
+            else if(computerScore > personScore)
+            {
+                alert("Computer wins!");
+            }
+            else
+            {
+                alert("It's a tie!");
+            }
+        }
+        function playAgain()
+        {
+            let playAgain = "n";
+            do 
+            {
+                playAgain = prompt("Do you want to play again? (Y/N)").toLowerCase();
+            }
+            while(playAgain !== "y" && playAgain !== "n");
+
+            if(playAgain === "y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
+  </body>
+</html>
