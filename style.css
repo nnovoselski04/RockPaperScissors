@@ -1,0 +1,226 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set default font properties */
+html, body {
+    font-family: Arial, sans-serif; /* Use a web-safe font */
+    font-size: 16px; /* Standard font size */
+    line-height: 1.6; /* Optimal readability */
+    color: #333; /* Default text color */
+    background-color: #fff; /* Default background color */
+    height: 100%; /* Ensure the full height is available for the body */
+    margin: 0; /* Remove default margins */
+    display: flex; /* Use flexbox for the body */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+
+    font-weight: normal; /* Adjust as needed */
+    color: #444; /* Slightly darker than body text */
+}
+
+/* Link styles */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* Button and input styles */
+button,
+input[type="button"],
+input[type="submit"] {
+    font: inherit;
+    color: inherit;
+    background-color: #fff000;
+    border : 2px solid transparent;
+    border-radius: 4px;
+    min-width:  120px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: border .1s ease-in-out, transform .2s ease-in-out;
+    font-weight: bold;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  border : 2px solid #000000;
+  transform: scale(1.05);
+}
+
+input,
+textarea {
+    font: inherit;
+    color: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+/* Container styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom classes */
+.gameContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:fit-content;
+    padding: 2rem 4rem;
+    border: .5rem solid #333;
+    
+}
+
+.UIstartOfGame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.playButton{
+    font-weight: 400;
+    font-size: 2rem;
+    padding: .5rem 3rem;
+}
+.chooseRoundCount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 2px solid #000000;
+    padding: .5rem 1rem;
+}
+.chooseRoundCount input{
+    width: 5rem;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 0px;
+}
+.chooseRoundCount p{
+    font-size: 1.2rem;
+   
+    border-radius: 5px;
+}
+.UImainGame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.UImainGame h3{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.UIscore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    border: .2rem solid #333;
+    padding: .5rem 4rem;
+}
+.UIscore .score
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+.UIscore .score div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+}
+.UIscore .computerScoreCount, .UIscore .personScoreCount{
+    font-weight: bold;
+}
+
+
+.UImainControls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.UImainControls .handControls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+}
+.handControls > *{
+    flex: 1;
+}
+.UIresult{
+    margin-top: 1rem;
+    border: .2rem solid #333;
+    padding: .2rem .4rem;
+}
+.UIendGame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+.UIendGame h3{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.UIfinalResult{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+.UIplayAgain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.displayNone{
+    display: none;
+}
